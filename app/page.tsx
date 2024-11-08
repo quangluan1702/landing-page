@@ -15,7 +15,11 @@ export default async function Home() {
   let backgroundImages: IBackgroundImage[] = [];
 
   try {
-    const request = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/landing-activities?populate=*`);
+    const request = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/landing-activities?populate=*`,{
+      headers:{
+        authorization: `Bearer ${process.env.API_TOKEN}`
+      }
+    });
     const res = await request.json();
     backgroundImages = res.data || [];
   } catch (error) {
