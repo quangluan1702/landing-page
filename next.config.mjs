@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  // output: "export",
 
   images: {
+    domains: ['4-create-langding-api.preview.cms.devplus.edu.vn'],
     remotePatterns: [
       {
         protocol: "https",
