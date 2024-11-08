@@ -11,7 +11,7 @@ interface IBackgroundImage {
 };
 
 export default async function Home  () {
-  const request = await fetch(`${process.env.BASE_URL}/api/landing-activities?populate=*`, {
+  const request = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/landing-activities?populate=*`, {
     // headers: {
     //   authorization: `Bearer ${process.env.API_TOKEN}`
     // }
@@ -24,7 +24,7 @@ export default async function Home  () {
         {backgroundImages
         .filter(({ IsPublic }) => IsPublic)
         .map(({ backgroundImage, title, subtitle }) => (
-          <Image src={`${process.env.BASE_URL}${backgroundImage?.formats?.thumbnail?.url}`} key={subtitle} alt={title}  width={1000} height={1000}></Image>
+          <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}${backgroundImage?.formats?.thumbnail?.url}`} key={subtitle} alt={title}  width={1000} height={1000}></Image>
 
         ))}
     </div>
