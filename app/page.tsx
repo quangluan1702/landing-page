@@ -22,6 +22,7 @@ export default async function Home() {
     });
     const res = await request.json();
     backgroundImages = res.data || [];
+    console.log(res)
   } catch (error) {
     console.error("Error fetching background images:", error);
   }
