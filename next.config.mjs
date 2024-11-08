@@ -1,15 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: "export",
+  output: "export",
 
   images: {
     
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "4-create-langding-api.preview.cms.devplus.edu.vn", // Add this hostname
-        pathname: "/uploads/**", // Specify the path pattern
-        domains: '4-create-langding-api.preview.cms.devplus.edu.vn',
+        protocol: 'https',
+        hostname: '4-create-langding-api.preview.cms.devplus.edu.vn',
+        port: '',
+        pathname: '/uploads/**',  // Specify the path if necessary
       }
     ],
   },
