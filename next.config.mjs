@@ -6,10 +6,10 @@ const nextConfig = {
     
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: '4-create-langding-api.preview.cms.devplus.edu.vn',
-        port: '',
-        pathname: '/uploads/**',  // Specify the path if necessary
+        protocol: "https",
+        hostname: "**",
+        // port: '',
+        // pathname: '/uploads/**',  // Specify the path if necessary
       }
     ],
   },
