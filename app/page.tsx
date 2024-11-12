@@ -30,7 +30,8 @@ export default async function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <h1>dsgsdfsdfsdfsdfdf</h1>
-      <Image alt="ok" src="https://4-create-langding-api.preview.cms.devplus.edu.vn/uploads/small_teambuilding_6506c9a012.png" width={500} height={500}></Image>
+      <Image alt="ok" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2VrhYm18sDqIdKOZD5ynA_zhI-AfdiL0e-g&s" width={500} height={500}></Image>
+      <hr />
       {backgroundImages
         .filter(({ IsPublic }) => IsPublic)
         .map(({ backgroundImage, title, subtitle }) => (

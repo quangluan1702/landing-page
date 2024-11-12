@@ -1,20 +1,23 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
+
   images: {
-    domains: ['https://4-create-langding-api.preview.cms.devplus.edu.vn/api/landing-activities?populate=*'],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "4-create-langding-api.preview.cms.devplus.edu.vn",
+        port: "",
+        pathname: "/uploads/**", // Adjust the path if needed
+      },
+      {
+        protocol: "https",
+        hostname: "encrypted-tbn0.gstatic.com",
+        port: "",
+        pathname: "/images/**",
+      },
+    ],
   },
-  // images: {
-    
-  //   remotePatterns: [
-  //     {
-  //       protocol: "https",
-  //       hostname: "**",
-  //       // port: '',
-  //       // pathname: '/uploads/**',  // Specify the path if necessary
-  //     }
-  //   ],
-  // },
 };
 
 export default nextConfig;
